@@ -1,0 +1,47 @@
+Outline: ================================
+
+* Activity Lifecycle
+Intents
+Broadcast receiver (listen for incoming SMS, etc)
+Rest service --- spring boot (Raptor JAX - RS)
+Async task httpclient
+JSON parsing
+Access google geocode or google places API and parse the JSON data
+Adapter based views.custom List adapter
+	get contact info and display in custom list which has a checkbox
+
+
+Activity Lifecycle ============================ (Todo: understand when activity switches, under what situation)
+	must call super. method
+	onSaveInstanceState() and onRestoreInstanceState() preserve activity state
+	onDestroy() is only called when the activity is gracefully closed
+
+Intent ============================
+	intention
+	can explicitly specify the app to complete action with, or implicitly and let user choose
+	can start another App
+
+Broadcast Receiver class ============================
+	eg: get text msg content and change phone ringer mode with AudioManager
+	onReceive method
+
+Intent-filter ==============================
+	 intent, String action, 
+
+Practice
+1) broadcast receiver for intentfilter action = 1
+2) broadcast an intent with action value = 1
+
+RESTful service -- spring boot
+
+http://maps.google.com/maps/api/geocode/json?address=chengdu&sensor=false (chengdu is the address)
+
+http://jsonviewer.stack.hu/
+
+Google geocode =========================
+	make geocode request, get JSON request, parse JSON and get the result
+
+
+
+
+

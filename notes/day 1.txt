@@ -1,0 +1,137 @@
+Eclipse ADT Android Studio
+			intellij platform
+
+Android OS
+Android Bootup
+
+Dev Env
+
+	Helloworld and understand workspace
+	Android tools
+	Activities --events
+		Singapore events (URL, extract info)
+		Android App (Google Map, reminder, geocode , google places API)
+
+Expectation & Requirements:
+Strong JAVA
+
+START========================================================
+Android history
+
+Android OS
+	refer to structure diagram: green in C++, blue in Java
+
+	Java: One.java ---> One.class (1 for each .java) ---> JVM
+	Android: *.java ---> *.dex file (only 1) ---> Dalvik Virtual Machine (until 4.4), JIT
+
+	1 apk --> 1 dex --> 1 process
+
+	in Android 4.4 ---> ART (Android Runtime)
+
+	in Android 5.0, only ART no more DVM, use AOT (Ahead of Time compilers)
+
+	changed Java APIs and runtime
+
+	Java libraries may not run on Android
+
+	Oracle & Google
+
+	when learn Android, we are learning the application framework layer, to go deeper to library level, use Native Development Kit(NDK)
+
+	when developing android app, we are building on top of application layer
+
+	lib: pocket sphinx (voice recognition), opencv(computer vision)
+
+	Memory----------
+	1. Internal memory
+		ROM: holds OS, locked by Bootloader (Nexus isn't locked, developer's phone...)
+		internal memory
+	2. External memory -- SD card
+	3. RAM
+
+	OS Start up-----------
+	Bootloader access ROM OS image and load it to RAM
+	init:
+		start Linux daemons, including:
+			USB 
+			ADB, provides log
+			debugger
+			radio interface layer
+	*Zygote: initiated by runtime, master DVM, create the system server DVM
+
+	each app is launched in its own process(DVM)
+
+	DVM operates at most 64MB
+
+	application stack
+
+	when insufficient memory, Zygote looks for the app that is least used, store its state in system server and kill it to free the space for another app
+	when reload the app, load the stored state if there is. it never kills active app
+
+	not a good practice to do multi-threading in Android
+
+helloworld ===============================================================
+Android Studio:
+	Gradle as build tool
+	SDK manager
+	AVD manager
+
+Resources/Drawble (don't hardcode)
+	different sizes of pics, but when we refer them, use the same name, system will choose the proper size
+
+AndroidManifest:
+	Activities registered in AndroidManifest, start with a dot, eg: .MainActivity
+
+	Intent:
+	stands for intentions, used for communication between activities
+
+	intent-filter:  
+	declare first activity 
+
+	app permissions listed here
+
+class ActionBarActivity:
+
+class Bundle:
+	load state from system server
+
+R:
+	resource class, to make sure resource does exist to prevent runtime error
+	can create our own folder under res folder
+
+Layout:
+	you should have a basic understanding alr
+
+class Log:
+	import Log class,
+	i:info, e:error, d:debug
+	Log.i(TAG, "");
+
+Intent:
+	used to jump to another activity
+	or perform certain actions eg dial, but we hv to specify the number to call or the url to visit
+	intent specifies 3 things: action, state, data
+
+uses-permission:
+	explicitly specified in AndroidManifest
+	in capital letter
+
+Bundle & Intent
+
+startActivityForResult
+onActivityResult
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

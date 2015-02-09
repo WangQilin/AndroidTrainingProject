@@ -1,0 +1,45 @@
+Outline: ================================
+
+Adapter based views.custom List adapter
+	get contact info and display in custom list which has a checkbox
+
+Location Service & Google maps
+
+Start sample App
+	Jsoup library to grab in event info
+	then async task to get a latitude and longitude
+	plot it in map
+
+Reading & Writing files
+
+Notifications
+
+Menus
+
+SQLite
+
+Full Text Search (FTS) in SQLite -- Apache Lucene
+	since traditional SQL search would be too slow on mobile device
+
+================
+Content Provider
+
+List Adapter
+
+Location Service & Google maps
+	Create google map activity, get google_maps_key from console.developers.google.com
+
+Jsoup:
+	Document doc = Jsoup.connect("http://www.google.com/").get();
+
+SharedPreferences
+	Reading & Writing file to memory & SD card
+
+Menu
+	res/Menu
+	onCreateOptionsMenu
+	onOptionsItemSelected
+
+
+
+
